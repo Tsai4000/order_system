@@ -4,6 +4,7 @@ const cors = require('cors')
 
 const db = require('./db')
 const testRouter = require('./routes/test-router')
+const restaurantRouter = require('./routes/restaurant')
 
 const app = express()
 const apiPort = 3000
@@ -19,5 +20,6 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api', testRouter)
+app.use('/api', restaurantRouter)
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
