@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Input from './Components/input';
+import React,{Component} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(props:any) {
+    super(props);
+    this.handleIDChange = this.handleIDChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.state = {
+      user_id: '',
+      user_password: '',
+      onclick: false,
+    };
+  }
+  handleIDChange(e:any) {
+    this.setState({user_id: e.target.value});
+  }
+  handlePasswordChange(e:any) {
+    this.setState({user_password: e.target.value});
+  }
+  handleClick = (e:any) => {
+    this.setState({onclick: true});
+  }
+  render(){
+    return (
+      <div>
+        <h1>Order System</h1>
+        <div>
+          <Input onClick={this.handleClick} id={this.handleIDChange} text="user id"/>
+          <Input onClick={this.handleClick} id={this.handlePasswordChange} text="user password"/>
+        </div>
+      </div>
+    );
 }
-
+}
 export default App;
