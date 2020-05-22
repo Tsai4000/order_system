@@ -4,13 +4,13 @@ FORMAT: 1A
 
 # Group Login API
 
-## User Login [/user]
+## User Login [/api/login]
 
 ### Get User Certification [GET /api/login/user{?id,password}]
 
 + Parameters
-    + id: s1051318 (string, optional) - user's id
-    + password: 042360ab (string, optional) - user's password
+    + id: s1051318 (string, required) - user's id
+    + password: 042360ab (string, required) - user's password
 
 + Response 200 (application/json)
     + Attributes
