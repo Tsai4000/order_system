@@ -10,13 +10,13 @@ FORMAT: 1A
 
 + Request (application/json)
     + Attributes
-        + student_id: `s1051318` (string, required) - write student id to database.
-        + username: `strawberry` (string, required) - write user name to database.
-        + vendor_name: `Alice` (string, required) - write vendor name to database.
-        + dishes_name: `無骨雞排` (string, required) - write dishes name to database. Dishes could be two or more.
-        + quantity: 1 (number, required) - write quintity of the dishes to database.
-        + retrieve_time: 1590006605 (number, required) - write retrieve time in timestamp of the dishes to database. It means when will you take the dishes.
-        + description: `加蛋` (string, required) - write description of the dishes to database.
+        + student_id: `s1051318` (string, required) - student's id.
+        + username: `strawberry` (string, required) - user's name.
+        + vendor_name: `Alice` (string, required) - the name of the restrunt which user chose.
+        + dishes_name: `無骨雞排` (string, required) - the name of the meal which user chose.
+        + quantity: 1 (number, required) - the number of meal which user chose.
+        + retrieve_time: 1590006605 (number, required) - retrieve time in timestamp of the dishes. It means when should user take the dishes.
+        + description: `加蛋` (string, required) - user's special needs of the dishes.
 
 + Response 204 (application/json)
     + Attributes

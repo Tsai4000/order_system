@@ -10,10 +10,10 @@ FORMAT: 1A
 
 + Request (application/json)
     + Attributes
-        + dishes_id: 02543 (number, required) - write dishes_id to database.
-        + vendorname: `蘭媽` (string, required) -  write vendorname to database.
-        + dishes_name: `無骨雞排` (strimg, required) - write dishes_name to database.
-        + price: 80 (number, required) - write price to database.
+        + dishes_id: 02543 (number, required) - different dishes' id should be different.
+        + vendorname: `蘭媽` (string, required) -  the name of the restrunt which user chose.
+        + dishes_name: `無骨雞排` (string, required) - the name of the meal which user chose.
+        + price: 80 (number, required) - the price of the meal which user chose.
 
 + Response 204 (application/json)
     + Attributes
