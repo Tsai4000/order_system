@@ -12,11 +12,10 @@ FORMAT: 1A
     + Attributes
         + student_id: `s1051318` (string, required) - student's id.
         + username: `strawberry` (string, required) - user's name.
-        + vendor_name: `Alice` (string, required) - the name of the restrunt which user chose.
-        + dishes_name: `無骨雞排` (string, required) - the name of the meal which user chose.
+        + dishes_name: `無骨雞排` (array, required) - the name of the meal which user chose.
         + quantity: 1 (number, required) - the number of meal which user chose.
         + retrieve_time: 1590006605 (number, required) - retrieve time in timestamp of the dishes. It means when should user take the dishes.
-        + description: `加蛋` (string, required) - user's special needs of the dishes.
+        + special_needs: `加蛋` (string, required) - user's special needs of the dishes.
 
 + Response 204 (application/json)
     + Attributes

@@ -10,10 +10,9 @@ FORMAT: 1A
 
 + Request (application/json)
     + Attributes
-        + dishes_id: 02543 (number, required) - different dishes' id should be different.
-        + vendorname: `蘭媽` (string, required) -  the name of the restrunt which user chose.
-        + dishes_name: `無骨雞排` (string, required) - the name of the meal which user chose.
-        + price: 80 (number, required) - the price of the meal which user chose.
+        + dishes_id: 02543 (array, required) - different dish's id should be different.
+        + dishes_name: `無骨雞排` (array, required) - the name of the meal which user chose.It should correspond to the dish's id array.
+        + price: 80 (array, required) - the price of the meal which user chose. It should correspond to the dish's name array.
 
 + Response 204 (application/json)
     + Attributes
