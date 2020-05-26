@@ -19,9 +19,7 @@ FORMAT: 1A
 
 + Response 204 (application/json)
     + Attributes
-        +error_message: `writed fail` (string, required) - return `writed fail` if writed fail.
+        + error_message: `writed fail` (string, required) - return `writed fail` if writed fail.
 
 + Response 200 (application/json)
-    + Attributes
-        +message: `writed successful` (string, required) - return `writed successful` if writed successful.
 

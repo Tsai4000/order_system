@@ -6,7 +6,7 @@ FORMAT: 1A
 
 ## User Login [/api/login]
 
-### Get User Certification [GET /api/login/user{?id,password}]
+### Get User Certification [GET /api/login/user/{id}/{password}]
 
 + Parameters
     + id: s1051318 (string, required) - user's id
