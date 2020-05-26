@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const Input = ({ onClick, id, text }:any) => (
+export const Input = ({id, text }:any) => (
     <div>
         <input value={text} onChange={id}/>
-        <button onClick={onClick}>{text}</button>
     </div>
 )
 
