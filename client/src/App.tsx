@@ -1,6 +1,7 @@
 import Input from './Components/input';
 import React,{Component} from 'react';
 import Button from './Components/button'
+import './App.css'
 
 class App extends Component{
   constructor(props:any) {
@@ -24,12 +25,15 @@ class App extends Component{
   }
   render(){
     return (
-      <div>
-        <h1>Order System</h1>
+      <div className="Container">
         <div>
-          <Input onClick={this.handleClick} id={this.handleIDChange} text="user id"/>
-          <Input onClick={this.handleClick} id={this.handleIDChange} text="user password"/>
-          <Button onClick={this.handleClick} text="login"/>
+          <div className="Support"></div>
+          <h1 className="Title">Order System</h1>
+          <div className="Show">
+            <Input onClick={this.handleClick} id={this.handleIDChange} text="user id"/>
+            <Input onClick={this.handleClick} id={this.handleIDChange} text="user password"/>
+            <Button onClick={this.handleClick} text="login"/>
+          </div>
         </div>
       </div>
     );
