@@ -8,9 +8,10 @@ enum User{
   + _id: String <<generated>>
   --
   + password: String
-  + userId: String
+  + user_id: String
   + username: String
   + role: String
+  + dishes_list: Array<String>
 }
 
 enum Order{
@@ -18,9 +19,11 @@ enum Order{
   --
   + user_id: String
   + username: String
-  + dishes_name: Array<dishesObject>
+  + dishes_list: Array<dishesObject>
   + retrieve_time: String
   + special_needs: String
+  + completed: Boolean
+  + price: Number
 }
 
 enum Dishes{
