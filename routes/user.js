@@ -4,6 +4,6 @@ const UserCtrl = require("../controllers/user")
 
 const router = express.Router()
 
-router.get("/login/:userId/:password", UserCtrl.login)
+router.post("/login", UserCtrl.login)
 
 module.exports = router

@@ -1,7 +1,9 @@
 const User = require("../models/user")
 
 login = async (req, res) => {
-  await User.findOne({ userId: req.params.userId }, (err, user) => {
+  const body = req.body
+
+  await User.findOne({ userId: body.userId }, (err, user) => {
     if (err) {
       return res.status(400).json({ success: false, error: err })
     }
@@ -12,7 +14,7 @@ login = async (req, res) => {
         .json({ success: false, error: `Wrong password or ID` })
     }
 
-    if (user.password != req.params.password) {
+    if (user.password != body.password) {
       return res.status(204).json({ error_messages: `Wrong password or ID` })
     }
 
