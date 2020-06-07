@@ -1,16 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Input = ({id, text }:any) => (
+export const Input = ({id, text, name}:any) => (
     <div>
-        <input value={text} onChange={id}/>
+        <input className={name} value={text} onChange={id}/>
     </div>
 )
 
 Input.propTypes = {
   onClick: PropTypes.func.isRequired,
   id: PropTypes.any.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 }
 
 export default Input
