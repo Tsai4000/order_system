@@ -1,7 +1,9 @@
 import Input from './input';
 import React,{Component} from 'react';
 import Button from './button'
-import './App.css'
+import './Login.css'
+import {Link} from 'react-router-dom';
+
 
 class Login extends Component{
   constructor(props:any) {
@@ -32,8 +34,10 @@ class Login extends Component{
           <div className="Show">
             <Input onClick={this.handleClick} id={this.handleIDChange} text="user id"/>
             <Input onClick={this.handleClick} id={this.handleIDChange} text="user password"/>
-            <Button onClick={this.handleClick} text="login"/>
           </div>
+          <Link to ="/order">
+            <Button onClick={this.handleClick} text="login"/>
+          </Link>
         </div>
       </div>
     );

@@ -1,21 +1,37 @@
 import React,{Component} from 'react';
-
+import products from './product.json';
+import Product from './Product';
+import {Jumbotron, Button} from 'react-bootstrap'
 class UserOrder extends Component{
   constructor(props:any) {
     super(props);
     this.state = {
-      user_id: '',
-      user_password: '',
-      onclick: false,
+      
     };
   }
   render(){
+    // const [{status, response: products}, makeRequest, dispatch] = FetchAllProducts()
+    // useEffect( () => {
+    //   makeRequest()
+  
+    // },[])
     return (
       <div className="Container">
         <div>
-          <div className="Support"></div>
-          <h1 className="Title">Call me daddy!!</h1>
+        <Jumbotron>
+    <h1>嵐媽訂餐系統</h1>
+      <p>
+          請在下列選擇想訂購的餐點和份數，完成後點選下列按鈕進行訂餐確認和領餐時間
+      </p>
+      <p>
+    <Button variant="primary">確認訂購</Button>
+      </p>
+    </Jumbotron>
         </div>
+        { products.map((product: any) => (
+                      <Product product={product}/>
+                  )
+                )}
       </div>
     );
 }
