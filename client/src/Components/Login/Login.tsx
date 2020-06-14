@@ -1,0 +1,46 @@
+import Input from './input';
+import React,{Component} from 'react';
+import Button from './button'
+import './Login.css'
+import {Link} from 'react-router-dom';
+
+
+class Login extends Component{
+  constructor(props:any) {
+    super(props);
+    this.handleIDChange = this.handleIDChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.state = {
+      user_id: '',
+      user_password: '',
+      onclick: false,
+    };
+  }
+  handleIDChange(e:any) {
+    this.setState({user_id: e.target.value});
+  }
+  handlePasswordChange(e:any) {
+    this.setState({user_password: e.target.value});
+  }
+  handleClick = (e:any) => {
+    this.setState({onclick: true});
+  }
+  render(){
+    return (
+      <div className="Container">
+        <div>
+          <div className="Support"></div>
+          <h1 className="Title">Order System</h1>
+          <div className="Show">
+            <Input onChange={this.handleIDChange}  text="user id"/>
+            <Input onChange={this.handleIDChange}  text="user password"/>
+          </div>
+          <Link to ="/order">
+            <Button name="login" onClick={this.handleClick} text="login"/>
+          </Link>
+        </div>
+      </div>
+    );
+}
+}
+export default Login;

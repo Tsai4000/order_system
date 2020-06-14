@@ -1,42 +1,25 @@
-import Input from './Components/input';
-import React,{Component} from 'react';
-import Button from './Components/button'
-import './App.css'
-import './Components/button.css'
-import './Components/input.css'
+import React, { Suspense } from 'react'
+import { Router, Switch, Route } from 'react-router-dom'
+import Login from './Components/Login/Login'
+import UserOrder from  './Components/User_Order/User_order'
+import AdminOrder from './Components/Admin_order/Admin_order'
+import history from './store/history'
 
-class App extends Component{
-  constructor(props:any) {
-    super(props);
-    this.handleIDChange = this.handleIDChange.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      user_id: '',
-      user_password: '',
-      onclick: false,
-    };
-  }
-  handleIDChange(e:any) {
-    this.setState({user_id: e.target.value});
-  }
-  handlePasswordChange(e:any) {
-    this.setState({user_password: e.target.value});
-  }
-  handleClick = (e:any) => {
-    this.setState({onclick: true});
-  }
-  render(){
-    return (
-      <div className="Container">
-        <h1 className="Title">Order System</h1>
-        <div className="Show">
-          <Input name="InputId" onClick={this.handleClick} id={this.handleIDChange} text="user id"/>
-          <Input name="InputPass" onClick={this.handleClick} id={this.handleIDChange} text="user password"/>
-          <Button name="LoginButton" onClick={this.handleClick} text="login"/>
-        </div>
-      </div>
-    );
-  }
-}
-export default App;
+const Loader = () => <div>loading...</div>
+const App = () => (
+  <Suspense fallback={<Loader/>}>
+    <Router history={history}>
+      <Switch>
+        <Route exact path = "/" component = {Login} />
+        {/* <Route path = "/product" component = {ProductList} /> */}
+        <Route path = "/order" component = {UserOrder} />
+        <Route path = "/admin" component={AdminOrder} />
+        {/* <Route path = "/register" component = {Register} />
+        <Route path = "/cart" component = {Cart} /> } */}
+        {/* <Route path = "/seller/product" component = {SellerProduct} /> */}
+      </Switch>
+    </Router>
+  </Suspense>
+)
+
+export default App

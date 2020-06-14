@@ -1,6 +1,6 @@
-import Input from './Components/input';
+import Input from './Components/Login/input';
 import React,{Component} from 'react';
-import Button from './Components/button'
+import Button from './Components/Login/button'
 import './student_order_identification.css'
 import './Components/button.css';
 
@@ -88,7 +88,7 @@ class Student_order_identification extends React.Component<IProps,IState> {
                 <div>
                     <h3>特殊需求：</h3>
                     <Input 
-                    name="SpecialNeeds" text="e.g.少油,不要滷汁" onClick={this.handleClick} id={this.handleSpecial_needsChange}
+                     text="e.g.少油,不要滷汁" onChange={this.handleSpecial_needsChange}
                     />
                 </div>
                 <div className="Price">
