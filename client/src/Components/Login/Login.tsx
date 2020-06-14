@@ -32,11 +32,11 @@ class Login extends Component{
           <div className="Support"></div>
           <h1 className="Title">Order System</h1>
           <div className="Show">
-            <Input onClick={this.handleClick} id={this.handleIDChange} text="user id"/>
-            <Input onClick={this.handleClick} id={this.handleIDChange} text="user password"/>
+            <Input onChange={this.handleIDChange}  text="user id"/>
+            <Input onChange={this.handleIDChange}  text="user password"/>
           </div>
           <Link to ="/order">
-            <Button onClick={this.handleClick} text="login"/>
+            <Button name="login" onClick={this.handleClick} text="login"/>
           </Link>
         </div>
       </div>
