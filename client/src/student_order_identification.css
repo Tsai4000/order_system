@@ -1,0 +1,36 @@
+.Container {
+    /* border-color: lightcoral;
+    border-width: 5px;
+    border-style: solid; */
+    width: 700px;
+    height: 800px;
+    float: 0;
+    margin: 0 auto;
+}
+
+.TimeNow {
+    text-align: center;
+    width: 50px;
+    height: 60px;
+    margin-left: 645px;
+    margin-top: -60px;
+}
+
+.SpecialNeeds{
+    width: 400px;
+    height: 100px;
+}
+
+.ButtonContainer {
+    margin-top: -50px;
+    margin-left: 5px;
+}
+
+.PickTime {
+    margin-top: -42px;
+    margin-left: 133px;
+}
+
+.Orders {
+    display: inline-block !important;
+}
