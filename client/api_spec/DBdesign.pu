@@ -1,0 +1,44 @@
+@startuml
+
+title DataBase
+
+skinparam componentStyle uml2
+
+enum User{
+  + _id: String <<generated>>
+  --
+  + password: String
+  + user_id: String
+  + username: String
+  + role: String
+  + dishes_list: Array<String>
+}
+
+enum Order{
+  + _id: String <<generated>>
+  --
+  + user_id: String
+  + username: String
+  + dishes_list: Array<dishesObject>
+  + retrieve_time: String
+  + special_needs: String
+  + completed: Boolean
+  + price: Number
+}
+
+enum Dishes{
+  + _id: String <<generated>>  
+  --
+  + dishes_name: String
+  + price: Number
+}
+
+object dishesObject{
+  + dishes_name: String
+  + quantity: Number
+}
+
+User ||--o{ Order
+Order ||--|{ dishesObject
+
+@enduml
