@@ -5,14 +5,15 @@ import {
   success,
   failure
 } from './action'
-import reducer, { initialState } from './reducer'
+import reducer, { initialState } from './reduser'
 
-const useLoginApi = payload => {
+const useDishesApi = payload => {
   const [ state, dispatch ] = useReducer(reducer, initialState)
   const makeRequest = async() => {
     dispatch(fetching())
-    const url = 'api/login'
-    const response = await fetch(url,{
+    const url = '/dishes'
+    const response = await fetch({
+      url,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -29,15 +30,8 @@ const useLoginApi = payload => {
 
     const json = await response.json()
     dispatch(success(json))
-    console.log(json)
-    if(json.data.role==='admin'){
-        history.push('/admin')
-    }
-    else if(json.data.role==='normal user'){
-        history.push('/order')
-    }
   }
   return [state, makeRequest]
 }
 
-export default useLoginApi
+export default useDishesApi

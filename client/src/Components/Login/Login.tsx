@@ -2,7 +2,6 @@ import Input from './input';
 import React,{Component, useState, useEffect} from 'react';
 import Button from './button'
 import './Login.css'
-import {Link} from 'react-router-dom';
 import useLoginApi from '../../hooks/Login/loginrequest'
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -10,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Login(this: any){
   const [account, handleIDChange] = useState('')
   const [password, handlePasswordChange] = useState('')
-  const [{status, response}, makeRequest] = useLoginApi({account, password})
+  const [{status, response}, makeRequest] = useLoginApi({user_id: account, password})
   
   function handleID(e:any) {
     handleIDChange(e.target.value);
@@ -19,20 +18,24 @@ function Login(this: any){
     handlePasswordChange(e.target.value);
   }
   function handleClick() {
-        makeRequest()
+        makeRequest({user_id: account, password})
   }
   return(
     <div className="Container">
     <div>
       <div className="Support"></div>
       <h1 className="Title">Order System</h1>
+      <h2>         </h2>
       <div className="Show">
-        <Input onChange={handleID}  text="user id"/>
-        <Input onChange={handlePassword}  text="user password"/>
+        <Input onClick={handleID}  text="user id"/>
+        <Input onClick={handlePassword}  text="user password"/>
       </div>
-      <Link to ="/order">
+      <div>
+      <h2>         </h2>
+      </div>
+      {/* <Link to ="/order"> */}
         <Button name="login" onClick={handleClick} text="login"/>
-      </Link>
+      {/* </Link> */}
     </div>
   </div>)
 }

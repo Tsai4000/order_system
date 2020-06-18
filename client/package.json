@@ -24,6 +24,7 @@
     "rxjs": "^6.5.4",
     "typescript": "^3.7.5"
   },
+  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "set PORT=3006 && react-scripts start",
     "build": "react-scripts build",
