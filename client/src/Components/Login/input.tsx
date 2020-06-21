@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const Button = ({onClick, text}:any) =>(
+export const Input = ({onClick, text}:any) =>(
     <div>
-        <input onChange={onClick} placeholder={text}/>
+        <input onChange={onClick} placeholder={text} name="password"/>
     </div>
 )
 
-Button.propTypes = {
+Input.propTypes = {
     onClick: PropTypes.func.isRequired,
     text: PropTypes.string.isRequired
   }
 
-export default Button
+export default Input

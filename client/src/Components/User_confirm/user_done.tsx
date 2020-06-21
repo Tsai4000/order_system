@@ -17,7 +17,7 @@ function Alertcheckout() {
           <hr />
           <div className="d-flex justify-content-end">
         <Link to ="/">
-          <Button variant="primary">確認訂購</Button>{' '}
+          <Button variant="primary">回登入畫面</Button>{' '}
         </Link>
           </div>
         </Alert>

@@ -17,7 +17,7 @@ const Product = (props: { product: any }) => {
     <Card.Body>
         單價: {price}  數量: {quantity}
         <div>
-        <input onChange={special_needs} placeholder="特殊需求..."/>
+            <input onChange={special_needs} placeholder="特殊需求..."/>
         </div>
     </Card.Body>
               </Accordion.Collapse>

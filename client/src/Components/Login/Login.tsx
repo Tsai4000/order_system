@@ -28,7 +28,7 @@ function Login(this: any){
       <h2>         </h2>
       <div className="Show">
         <Input onClick={handleID}  text="user id"/>
-        <Input onClick={handlePassword}  text="user password"/>
+        <input onChange={handlePassword} placeholder="user password" type="password" name="password"/>
       </div>
       <div>
       <h2>         </h2>

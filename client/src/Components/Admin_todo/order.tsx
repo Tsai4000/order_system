@@ -1,5 +1,5 @@
 import {Card, Button, Accordion, Form} from 'react-bootstrap'
-import React, {useState} from 'react'
+import React from 'react'
 
 const Product = (props: { product: any }) => {
     const { product } = props

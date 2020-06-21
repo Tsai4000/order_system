@@ -5,7 +5,8 @@
     "price": 87,
     "quantity": 1,
     "type": "you joke!",
-    "review": 2
+    "review": 2,
+    "special_needs": "加辣椒"
   },
   {
     "imagePath": "https://1.share.photo.xuite.net/yuan6989/11b7157/15352717/820312266_m.jpg",
@@ -14,5 +15,17 @@
     "price": 87,
     "quantity": 2,
     "type": "you joke!",
-    "review": 2
-  }]
+    "review": 2,
+    "special_needs": "加沙茶醬"
+  },
+  {
+    "imagePath": "https://1.share.photo.xuite.net/yuan6989/11b7157/15352717/820312266_m.jpg",
+    "title": "無骨立威僅",
+    "description": "this is a joke",
+    "price": 87,
+    "quantity": 2,
+    "type": "you joke!",
+    "review": 2,
+    "special_needs": "加沙茶醬"
+  }
+]
